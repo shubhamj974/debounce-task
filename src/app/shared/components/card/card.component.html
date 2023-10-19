@@ -1,15 +1,30 @@
-<mat-card class="mb-3">
-  <mat-card-title> {{ bookArrToCard.title }}</mat-card-title>
-  <mat-card-subtitle>{{ bookArrToCard.subtitle }} </mat-card-subtitle>
-  <img
-    class="img-fluid"
-    mat-card-image
-    [src]="bookArrToCard.imageLinks.thumbnail"
-    alt="Photo of a Shiba Inu"
-  />
+<mat-card class="example-card book-card mb-3 mat-elevation-z10">
+  <mat-card-title-group class="mb-3">
+    <mat-card-title>{{ bookArrToCard.title }}</mat-card-title>
+    <mat-card-subtitle>{{ bookArrToCard.subtitle }}</mat-card-subtitle>
+    <img
+      mat-card-lg-image
+      class="book-thumnail"
+      [src]="bookArrToCard.imageLinks.thumbnail"
+    />
+  </mat-card-title-group>
   <mat-card-content>
+    <p>{{ bookArrToCard.description | slice : 0 : 200 }}</p>
+
     <p>
-      {{ bookArrToCard.description }}
+      <span>Auther</span> : <span>{{ bookArrToCard.authors }}</span>
+    </p>
+    <p>
+      <span>Publisher</span> : <span>{{ bookArrToCard.publisher }}</span>
+    </p>
+    <p>
+      <span>Language</span> : <span>{{ bookArrToCard.language }}</span>
+    </p>
+    <p>
+      <span>Categories</span> : <span>{{ bookArrToCard.categories }}</span>
+    </p>
+    <p>
+      <span>Page Count</span> : <span>{{ bookArrToCard.pageCount }}</span>
     </p>
   </mat-card-content>
 </mat-card>
