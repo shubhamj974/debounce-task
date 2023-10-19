@@ -1,0 +1,15 @@
+<mat-card class="mb-3">
+  <mat-card-title> {{ bookArrToCard.title }}</mat-card-title>
+  <mat-card-subtitle>{{ bookArrToCard.subtitle }} </mat-card-subtitle>
+  <img
+    class="img-fluid"
+    mat-card-image
+    [src]="bookArrToCard.imageLinks.thumbnail"
+    alt="Photo of a Shiba Inu"
+  />
+  <mat-card-content>
+    <p>
+      {{ bookArrToCard.description }}
+    </p>
+  </mat-card-content>
+</mat-card>
